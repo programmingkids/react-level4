@@ -1,5 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState, useEffect } from 'react';
+import { TableBox } from './components/Table';
+
+const API_URL = 'https://cog-study.herokuapp.com';
+const PATH = '/react_level4/chapter02/player/';
 
 function App() {
   return (
