@@ -1,5 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+import {TableBox} from './components/Table';
+
+const API_URL = 'https://cog-study.herokuapp.com';
+const PATH = '/react_level4/chapter03/enemy/';
 
 function App() {
   return (
