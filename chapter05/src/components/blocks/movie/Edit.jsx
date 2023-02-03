@@ -4,6 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { DispatchContext } from './../../providers/DispatchContext';
 import { StateContext } from './../../providers/StateContext';
 import { updateMovie } from './../../providers/MovieAPI';
+import { EditForm } from './EditForm';
 
 export const Edit = () => {
   const navigate = useNavigate();
@@ -43,49 +44,12 @@ export const Edit = () => {
   };
   
   return (
-    <div className="movieForm">
-      <div className="m-form-text-container">
-        <div className="m-form-text-label">タイトル</div>
-        <div>
-          <input
-            className="m-form-text" 
-            type="text"
-            id="title" 
-            onChange={handleOnChange} 
-            value={movie.title}
-          />
-        </div>
-      </div>
-      <div className="m-form-text-container">
-        <div className="m-form-text-label">URL</div>
-        <div>
-          <input
-            className="m-form-text"
-            type="text"
-            id="url"
-            onChange={handleOnChange}
-            value={movie.url}
-          />
-        </div>
-      </div>
-      <div className="m-form-text-container">
-        <div className="m-form-text-label">ジャンル</div>
-        <div>
-          <input
-            className="m-form-text"
-            type="text"
-            id="genre"
-            onChange={handleOnChange}
-            value={movie.genre}
-          />
-        </div>
-      </div>
-      <div className="button-container">
-        <button 
-          onClick={handleOnClickButton} 
-          className="primary">更新
-        </button>
-      </div>
-    </div>
+    <>
+      <EditForm
+        movie={movie}
+        handleOnChange={handleOnChange}
+        handleOnClickButton={handleOnClickButton}
+      />
+    </>
   );
 };
