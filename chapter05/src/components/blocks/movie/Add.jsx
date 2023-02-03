@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { StateContext } from './../../providers/StateContext';
 import { DispatchContext } from './../../providers/DispatchContext';
 import { createMovie } from './../../providers/MovieAPI';
+import { AddForm } from './AddForm';
 
 export const Add = () => {
   const navigate = useNavigate();
@@ -40,49 +41,12 @@ export const Add = () => {
   };
   
   return (
-    <div className="movieForm">
-      <div className="m-form-text-container">
-        <div className="m-form-text-label">タイトル</div>
-        <div>
-          <input
-            className="m-form-text" 
-            type="text"
-            id="title" 
-            onChange={handleOnChange} 
-            value={movie.title}
-          />
-        </div>
-      </div>
-      <div className="m-form-text-container">
-        <div className="m-form-text-label">URL</div>
-        <div>
-          <input
-            className="m-form-text"
-            type="text"
-            id="url"
-            onChange={handleOnChange}
-            value={movie.url}
-          />
-        </div>
-      </div>
-      <div className="m-form-text-container">
-        <div className="m-form-text-label">ジャンル</div>
-        <div>
-          <input
-            className="m-form-text"
-            type="text"
-            id="genre"
-            onChange={handleOnChange}
-            value={movie.genre}
-          />
-        </div>
-      </div>
-      <div className="button-container">
-        <button 
-          onClick={handleOnClickButton} 
-          className="primary">新規作成
-        </button>
-      </div>
-    </div>
+    <>
+      <AddForm
+        movie={movie}
+        handleOnChange={handleOnChange}
+        handleOnClickButton={handleOnClickButton}
+      />
+    </>
   );
 };
