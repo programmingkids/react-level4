@@ -9,19 +9,6 @@ export const AppProvider = (props) => {
   const { children } = props;
   const [state, dispatch] = useReducer(reducer, initialData);
   
-  useEffect(() => {
-    (async () => {
-      const { movieList, apiURL } = state;
-      if( movieList.length > 0 ) return;
-      const data = await getMovies(apiURL);
-      dispatch({
-        type : 'list',
-        payload : {
-          movieList : data,
-        }
-      });
-    })();
-  }, []);
   
   return (
     <DispatchContext.Provider value={dispatch}>
