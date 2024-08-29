@@ -1,0 +1,43 @@
+export const Form = ({enemy, handleOnChange, handleOnClickButton}) => (
+  <div>
+    <div>
+      名前
+      <input 
+        type="text" 
+        id="name" 
+        onChange={handleOnChange} 
+        value={enemy.name} 
+      />
+    </div>
+    <div>
+      HP
+      <input 
+        type="number" 
+        id="hp" 
+        onChange={handleOnChange} 
+        value={enemy.hp}
+      />
+    </div>
+    <div>
+      属性
+      <input 
+        type="text" 
+        id="type" 
+        onChange={handleOnChange} 
+        value={enemy.type}
+      />
+    </div>
+    <div>
+      攻撃力
+      <input 
+        type="number"
+        id="attack"
+        onChange={handleOnChange}
+        value={enemy.attack}
+      />
+    </div>
+    <div className="btnPost">
+      <button onClick={handleOnClickButton}>登録</button>
+    </div>
+  </div>
+);
