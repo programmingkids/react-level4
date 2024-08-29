@@ -1,44 +1,44 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
-import axios from 'axios';
-import { Title } from './../blocks/Title';
-import { Form } from './../blocks/Form';
+import React from "react";
+import { useState, useEffect } from "react";
+import { useNavigate, Link } from "react-router-dom";
+import axios from "axios";
+import { Title } from "./../blocks/Title";
+import { Form } from "./../blocks/Form";
 
-const API_URL = 'https://cog-study.herokuapp.com';
-const PATH = '/react_level4/chapter04/book/';
+const API_URL = "https://cog-study.herokuapp.com";
+const PATH = "/react_level4/chapter04/book/";
 
 export const BookCreate = (props) => {
   const navigate = useNavigate();
   const [book, setBook] = useState({
-    title : '',
-    author : '',
-    price : '',
-    genre : '',
+    title: "",
+    author: "",
+    price: "",
+    genre: "",
   });
-  
+
   const handleOnChange = (e) => {
-    const b = {...book};
+    const b = { ...book };
     b[e.target.id] = e.target.value;
-    setBook(prevBook => b);
+    setBook((prevBook) => b);
   };
-  
+
   const handleOnClickButton = (e) => {
     (async () => {
       const response = await axios.post(API_URL + PATH, book);
       const data = response.data;
-      
+
       setBook({
-        title : '',
-        author : '',
-        price : '',
-        genre : '',
+        title: "",
+        author: "",
+        price: "",
+        genre: "",
       });
-      
-      navigate('/');
+
+      navigate("/");
     })();
   };
-  
+
   return (
     <>
       <Title>本の新規作成</Title>
