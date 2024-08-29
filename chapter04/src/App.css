@@ -1,0 +1,122 @@
+.App {
+  text-align: center;
+}
+
+.title {
+  padding: 0.25em;
+  background-color: #EEE0E5;
+  border-top: solid 2px #9932CC;
+  border-bottom: solid 2px #9932CC;
+  text-align: center;
+  color: #9932CC;
+  font-size: 2em;
+}
+
+nav {
+  margin: 1em auto;
+  width : 80%;
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+  margin: 10px;
+}
+
+nav li a {
+	background:linear-gradient(to bottom, #c123de 5%, #a20dbd 100%);
+	background-color:#c123de;
+	border-radius:10px;
+	border:1px solid #a511c0;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:15px;
+	padding:10px 32px;
+	text-decoration:none;
+}
+
+nav li a:hover {
+	background:linear-gradient(to bottom, #a20dbd 5%, #c123de 100%);
+	background-color:#a20dbd;
+}
+
+nav li a:active {
+	position:relative;
+	top:1px;
+}
+
+.description {
+  background-color: #dedede;
+  width : 50%;
+  margin: 1em auto;
+  padding: 1em;
+  text-align: left;
+  border: 3px dashed grey;
+}
+
+.my-table {
+  margin: 0 auto;
+  width: 90%;
+  text-align: center;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background: #EE82EE;
+  table-layout: fixed;
+}
+
+.my-table tr:nth-child(2n+1) {
+  background: #EEE0E5;
+}
+
+.my-table th {
+  padding: 8px;
+  border: solid 1px #ffffff;
+  background: #9400D3;
+  color: #ffffff;
+}
+
+.my-table td {
+  padding: 8px;
+  border: solid 1px #ffffff;
+  word-break : break-all;
+}
+
+.my-detail {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.my-detail dt {
+  width: 30%;
+  margin:0;
+  padding: 20px 0;
+  border-bottom:2px solid #fff;
+  background-color: #BA55D3;
+  color: #fff;
+  text-align:center;
+}
+
+.my-detail dd {
+  width: 70%;
+  margin:0;
+  padding: 20px 0;
+  border-bottom:2px solid #fff;
+  background-color: #EEE0E5;
+  text-align:center;
+}
+
+#title, #author, #price, #genre {
+  font-size: 1em;
+  padding: 0.3em;
+  margin: 5px;
+}
+
+.btnPost {
+  margin : 10px;
+}
+
+.btnPost button {
+  padding: 10px 50px;
+}
