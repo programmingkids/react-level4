@@ -1,0 +1,78 @@
+.App {
+  text-align: center;
+}
+
+.my-table {
+  margin: 0 auto;
+  width: 90%;
+  text-align: center;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background: #FFB6C1;
+  table-layout: fixed;
+}
+
+.my-table tr:nth-child(2n+1) {
+  background: #EEEED1;
+}
+
+.my-table th {
+  padding: 8px;
+  border: solid 1px #ffffff;
+  background: #FF6347;
+  color: #ffffff;
+}
+
+.my-table td {
+  padding: 8px;
+  border: solid 1px #ffffff;
+  word-break : break-all;
+}
+
+.my-detail {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.my-detail dt {
+  width: 30%;
+  margin:0;
+  padding: 20px 0;
+  border-bottom:2px solid #fff;
+  background-color: #1E90FF;
+  color: #fff;
+  text-align:center;
+}
+
+.my-detail dd {
+  width: 70%;
+  margin:0;
+  padding: 20px 0;
+  border-bottom:2px solid #fff;
+  background-color: #C6E2FF;
+  text-align:center;
+}
+
+#name, #hp, #mp, #job {
+  font-size: 1em;
+  padding: 0.3em;
+  margin: 5px;
+}
+
+.btnPost {
+  margin : 10px;
+}
+
+.btnPost button {
+  padding: 10px 50px;
+}
+
+.btnUpdate {
+  margin : 10px;
+  text-align : right;
+}
+
+.btnUpdate button{
+  padding : 10px 50px;
+}
